@@ -1,6 +1,6 @@
 services:
   web:
-    image: pauliej/pauliej-web:latest
+    image: pauliejes/pauliej-web:latest
     build: ./frontend
     expose:
       - "3000"
@@ -8,7 +8,7 @@ services:
       - api
 
   api:
-    image: pauliej/pauliej-api:latest
+    image: pauliejes/pauliej-api:latest
     build: ./backend
     expose:
       - "8000"
