@@ -1,6 +1,6 @@
 # 🌟 PaulieJ Project 🌟
 
-Welcome to the **PaulieJ Project**! This repository houses a sophisticated full-stack application with a Python backend and a Next.js frontend, all containerized for easy deployment. Follow the steps below to set up and run the project on your local machine or deploy it to the cloud.
+Welcome to project **pauliej.com**! This repository houses a sophisticated full-stack application with a Python backend and a Next.js frontend, all containerized for easy deployment. Follow the steps below to set up and run the project on your local machine or deploy it to the cloud.
 
 ## 🚀 Features
 
@@ -31,8 +31,8 @@ Welcome to the **PaulieJ Project**! This repository houses a sophisticated full-
 │   │   ├── pages
 │   │   │   ├── _app.js
 │   │   │   ├── index.js
-│   │   ├── styles
-│   │   │   └── globals.css
+│   ├── styles
+│   │   └── globals.css
 │   ├── node_modules
 │   ├── package-lock.json
 │   ├── package.json
@@ -61,7 +61,7 @@ Welcome to the **PaulieJ Project**! This repository houses a sophisticated full-
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/pauliej.git
+git clone https://github.com/pauli3j/pauliej.git
 cd pauliej
 ```
 
@@ -107,6 +107,134 @@ npm run dev
 
 ## 🚢 Deployment
 
+### Step-by-Step Guide to Deploy on DigitalOcean
+
+1. **Create a DigitalOcean Droplet**:
+   - Log in to DigitalOcean.
+   - Create a new Droplet using Ubuntu.
+   - Choose the appropriate size and data center region.
+   - Add your SSH key.
+
+2. **Access Your Droplet**:
+   ```bash
+   ssh root@your_droplet_ip
+   ```
+
+3. **Clone Your GitHub Repository**:
+   ```bash
+   git clone https://github.com/pauli3j/pauliej.git
+   cd pauliej
+   ```
+
+4. **Install Docker and Docker Compose**:
+   ```bash
+   apt update
+   apt install docker.io
+   curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   chmod +x /usr/local/bin/docker-compose
+   ```
+
+5. **Build and Run Containers**:
+   ```bash
+   docker-compose up -d
+   ```
+
+6. **Install Nginx**:
+   ```bash
+   apt install nginx
+   ```
+
+7. **Configure Nginx**:
+   ```nginx
+   server {
+       listen 80;
+       server_name pauliej.com www.pauliej.com;
+
+       location / {
+           proxy_pass http://localhost:3000;
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           proxy_set_header X-Forwarded-Proto $scheme;
+       }
+   }
+   ```
+
+   Restart Nginx:
+   ```bash
+   systemctl restart nginx
+   ```
+
+8. **Setup Custom Domain on DigitalOcean**:
+   - Add your domain to DigitalOcean.
+   - Update DNS settings on Namecheap to point to your Droplet's IP.
+
+9. **Setup SSL with Let’s Encrypt**:
+   ```bash
+   apt install certbot python3-certbot-nginx
+   certbot --nginx -d pauliej.com -d www.pauliej.com
+   ```
+
+   Automate SSL renewal:
+   ```bash
+   crontab -e
+   ```
+
+   Add:
+   ```bash
+   0 0,12 * * * root certbot renew --quiet
+   ```
+
+10. **Setup GitHub Actions for CI/CD**:
+    - Create `.github/workflows/deploy.yml`:
+      ```yaml
+      name: Deploy to DigitalOcean
+
+      on:
+        push:
+          branches:
+            - main
+
+      jobs:
+        deploy:
+          runs-on: ubuntu-latest
+
+          steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - name: Set up Docker
+            uses: docker/setup-buildx-action@v1
+
+          - name: Log in to Docker Hub
+            uses: docker/login-action@v1
+            with:
+              username: ${{ secrets.DOCKER_USERNAME }}
+              password: ${{ secrets.DOCKER_PASSWORD }}
+
+          - name: Build and push Docker images
+            run: |
+              docker-compose -f docker-compose.yml build
+              docker-compose -f docker-compose.yml push
+
+          - name: SSH and Deploy
+            uses: appleboy/ssh-action@master
+            with:
+              host: ${{ secrets.DROPLET_IP }}
+              username: root
+              key: ${{ secrets.SSH_PRIVATE_KEY }}
+              script: |
+                cd /path/to/your/project
+                git pull origin main
+                docker-compose -f docker-compose.yml pull
+                docker-compose -f docker-compose.yml up -d
+      ```
+
+    - Add GitHub Secrets:
+      - `DOCKER_USERNAME`: Your Docker Hub username.
+      - `DOCKER_PASSWORD`: Your Docker Hub password.
+      - `DROPLET_IP`: Your DigitalOcean Droplet IP address.
+      - `SSH_PRIVATE_KEY`: Your private SSH key.
 
 ## ✨ Contributors
 
