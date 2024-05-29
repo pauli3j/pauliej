@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <nav className="bg-background p-4 dark:bg-darkaccent">
+      <nav className="bg-background p-4 dark:bg-darkaccent max-h-12">
         <div className="container mx-auto items-center flex flex-col sm:flex-row sm:justify-left justify-center sm:justify-between text-center sm:text-left">
           <h1 className="text-4xl font-coop text-teal-950 dark:text-darktextaccent">pauliej.com</h1>
           <Button variant="nav" size="default" onClick={toggleDarkMode}>

@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const NodeSchemePlugin = require('./custom-webpack-plugin');
 
 module.exports = withTM({
+  env: {
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+  },
   webpack: (config) => {
     config.resolve.fallback = {
       fs: false,

@@ -14,7 +14,7 @@ import {
     return (
       <div className="min-h-screen p-6">
         <div className="max-w-7xl mx-auto space-y-4">
-          <header className="text-center py-10 sm:py-20">
+          <header className="text-center py-5 sm:py-20">
             <h1 className="text-3xl font-black">Welcome to my world!</h1>
             <p className="text-xl text-gray-500 mt-4 ">Explore the life of Paulie J through this website, pauliej.com</p>
           </header>
@@ -22,10 +22,10 @@ import {
           <main className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card>
               <CardHeader>
-                <CardTitle>About Me</CardTitle>
+                <CardTitle>Who?</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Proficient in Python full-stack web development and Cloud solutions (AWS and Azure). Skilled in security assessment, building tools for automation, and basic penetration testing. Excellent communicator, problem solver, and collaborative team player.</p>
+                <p>Hello hello! I'm Paulie Jesukiewicz, coming at you via HTTP request. Little bit about me: I'm a Professional-Python-Playa and Crowned-Cloud-Captain. I can tackle just about anything you throw at me on a computer, but my true loves are suring up software security, crafting physics-defying automation, and embarking on lifelong learning escapades. I've been known for my eloquent discourse, ingenious solutions, and harmonious collaboration.</p>
               </CardContent>
             </Card>
   
@@ -43,7 +43,7 @@ import {
                 <CardTitle>Hobbies</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Discover my hobbies and interests outside of work, including Raspberry Pi projects and leisurely walks.</p>
+                <p>When I'm not diving deep into code or exploring new tech trends, you can find me tinkering at my workbench with soldering projects and Raspberry Pi experiments. I love creating DIY electronics and finding innovative ways to integrate technology into everyday life. In my downtime, I enjoy leisurely walks around Adams Morgan, soaking in the vibrant community and the occasional brainstorming session. Lifelong learning is my mantra, and I’m always on the hunt for the next big idea or project to tackle.</p>
               </CardContent>
             </Card>
           </main>
