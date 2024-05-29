@@ -2,23 +2,15 @@ version: '3.8'
 
 services:
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: pauliejes/pauliej-web:latest
+    build: ./frontend
+    ports:
+      - "80:3000"
+    depends_on:
+      - api
+
+  api:
+    image: pauliejes/pauliej-api:latest
+    build: ./backend
     ports:
       - "8000:8000"
-    networks:
-      - fly
-
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    networks:
-      - fly
-
-networks:
-  fly:
-    driver: bridge
