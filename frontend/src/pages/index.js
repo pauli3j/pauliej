@@ -34,7 +34,17 @@ import {
                 <CardTitle>Projects</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Explore the various projects I've worked on, from web development to cybersecurity.</p>
+                <ul>
+                  <li>
+                      <strong>CI/CD Security Automation:</strong> Developed a Python-based tool to automate compliance testing, leveraging Docker, Python, MySQL, and Splunk to streamline security analysis.
+                  </li>
+                  <li>
+                      <strong>Application Revamp:</strong> Led a migration to modern architecture using Django, Vue.JS, and Azure, enhancing system performance and security by 30%.
+                  </li>
+                  <li>
+                      <strong>Tableau Dashboard Portal:</strong> Designed a company-wide portal for Tableau dashboards, increasing user engagement and improving data accessibility.
+                  </li>
+                </ul>
               </CardContent>
             </Card>
   
