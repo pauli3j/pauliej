@@ -110,7 +110,7 @@ npm run dev
 
 ## ✨ Contributors
 
-- [Your Name](https://github.com/pauli3j)
+- [Paulie Jesukiewicz](https://github.com/pauli3j)
 
 ## 📄 License
 
