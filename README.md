@@ -53,7 +53,6 @@ Welcome to the **PaulieJ Project**! This repository houses a sophisticated full-
 ## 📦 Prerequisites
 
 - [Docker](https://www.docker.com/)
-- [Fly.io CLI](https://fly.io/docs/hands-on/install-flyctl/)
 - [Node.js](https://nodejs.org/) (for local development)
 - [Python](https://www.python.org/) (for local backend development)
 
@@ -108,25 +107,6 @@ npm run dev
 
 ## 🚢 Deployment
 
-### Fly.io
-
-1. **Login to Fly.io:**
-
-   ```bash
-   flyctl auth login
-   ```
-
-2. **Initialize Fly.io App:**
-
-   ```bash
-   flyctl launch
-   ```
-
-3. **Deploy:**
-
-   ```bash
-   flyctl deploy
-   ```
 
 ## ✨ Contributors
 
