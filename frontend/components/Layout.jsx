@@ -1,6 +1,7 @@
 // components/Layout.jsx
-
+import { Button } from "@/components/ui/button";
 import { useState, useEffect } from 'react';
+import Quote from '@/components/Quote';
 
 const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(true);
@@ -19,19 +20,17 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <nav className="bg-gray-800 p-4 dark:bg-darkaccent">
-        <div className="container mx-auto justify-between items-center flex flex-col sm:flex-row sm:justify-left justify-center text-center sm:text-left">
-          <h1 className="text-4xl font-coop text-white dark:text-darktext">pauliej.com</h1>
-          <button
-            onClick={toggleDarkMode}
-            className="p-2 bg-gray-300 dark:bg-darkbg text-black dark:text-darktext rounded invisible sm:visible"
-          >
+      <nav className="bg-background p-4 dark:bg-darkaccent">
+        <div className="container mx-auto items-center flex flex-col sm:flex-row sm:justify-left justify-center sm:justify-between text-center sm:text-left">
+          <h1 className="text-4xl font-coop text-teal-950 dark:text-darktextaccent">pauliej.com</h1>
+          <Button variant="nav" size="default" onClick={toggleDarkMode}>
             Theme
-          </button>
+          </Button>
         </div>
       </nav>
-      <main className="container mx-auto p-4">
+      <main className="container mx-auto p-2">
         {children}
+        <Quote /> {/* Include the Quote component */}
       </main>
     </div>
   );

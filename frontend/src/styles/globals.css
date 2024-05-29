@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Cooper Black';
+  src: url(/fonts/COOPBL.woff) format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+.coop {
+  font-family: 'Cooper Black', sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -70,14 +80,4 @@ button {
 
 .dark button {
   @apply bg-darkaccent text-darktext;
-}
-
-@font-face {
-  font-family: 'Cooper Black';
-  src: url(/fonts/COOPBL.woff) format('woff');
-  font-style: normal;
-  font-weight: 400;
-}
-.coop {
-  font-family: 'Cooper Black', sans-serif;
 }

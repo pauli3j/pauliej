@@ -12,11 +12,11 @@ import {
   
   export default function Home() {
     return (
-      <div className="min-h-screen bg-gray-100 p-6">
+      <div className="min-h-screen p-6">
         <div className="max-w-7xl mx-auto space-y-4">
-          <header className="text-center py-20">
-            <h1 className="text-xl font-coop mb-8">Welcome to my world!</h1>
-            <p className="text-lg text-gray-700">Explore the life of Paulie J through this website, pauliej.com</p>
+          <header className="text-center py-10 sm:py-20">
+            <h1 className="text-3xl font-black">Welcome to my world!</h1>
+            <p className="text-xl text-gray-500 mt-4 ">Explore the life of Paulie J through this website, pauliej.com</p>
           </header>
   
           <main className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -57,7 +57,7 @@ import {
                 <DialogHeader>
                   <DialogTitle>Contact Me</DialogTitle>
                   <DialogDescription>
-                    Feel free to reach out if you want to collaborate or just chat!
+                    Please feel free to <a href="https://www.linkedin.com/in/paulie-jesukiewicz-835694111/">reach out</a> if you want to collaborate or talk turkey.
                   </DialogDescription>
                 </DialogHeader>
               </DialogContent>
