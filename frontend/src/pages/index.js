@@ -25,7 +25,7 @@ import {
                 <CardTitle>About Me</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Learn about my background, experience, and skills.</p>
+                <p>Proficient in Python full-stack web development and Cloud solutions (AWS and Azure). Skilled in security assessment, building tools for automation, and basic penetration testing. Excellent communicator, problem solver, and collaborative team player.</p>
               </CardContent>
             </Card>
   
