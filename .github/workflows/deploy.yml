@@ -24,7 +24,7 @@ jobs:
 
     - name: Build and push Docker images
       run: |
-        echo "NEXT_PUBLIC_API_URL=http://pauliej.com:8000" >> ./frontend/.env.production
+        echo "NEXT_PUBLIC_API_URL=https://pauliej.com:8000" >> ./frontend/.env.production
         docker-compose -f docker-compose.yml build
         docker-compose -f docker-compose.yml push
 
