@@ -13,9 +13,9 @@ import {
   export default function Home() {
     return (
       <div className="min-h-screen bg-gray-100 p-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto space-y-4">
           <header className="text-center py-20">
-            <h1 className="text-5xl font-bold mb-6">Welcome to my world!</h1>
+            <h1 className="text-xl font-coop mb-8">Welcome to my world!</h1>
             <p className="text-lg text-gray-700">Explore the life of Paulie J through this website, pauliej.com</p>
           </header>
   

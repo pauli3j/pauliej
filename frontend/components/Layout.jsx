@@ -20,11 +20,11 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <nav className="bg-gray-800 p-4 dark:bg-darkaccent">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-white dark:text-darktext">pauliej.com</h1>
+        <div className="container mx-auto justify-between items-center flex flex-col sm:flex-row sm:justify-left justify-center text-center sm:text-left">
+          <h1 className="text-4xl font-coop text-white dark:text-darktext">pauliej.com</h1>
           <button
             onClick={toggleDarkMode}
-            className="p-2 bg-gray-300 dark:bg-darkbg text-black dark:text-darktext rounded"
+            className="p-2 bg-gray-300 dark:bg-darkbg text-black dark:text-darktext rounded invisible sm:visible"
           >
             Theme
           </button>

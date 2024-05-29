@@ -20,9 +20,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        darkbg: '#121212',
-        darktext: '#e0e0e0',
-        darkaccent: '#bb86fc',
+        darkbg: '#0d0017',
+        darktext: '#c5deff',
+        darktextaccent: '#8e90ff',
+        darkaccent: '#0c0019',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,6 +76,9 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        coop: 'Cooper Black, sans-serif',
       },
     },
   },

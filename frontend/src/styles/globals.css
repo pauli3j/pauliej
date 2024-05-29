@@ -32,12 +32,12 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --background: 274 100% 5%;
+    --foreground: 163 100% 93%;
+    --card: 259 7% 13%;
+    --card-foreground: 259 100% 94%;
+    --popover: 259 7% 13%;
+    --popover-foreground: 259 100% 94%;
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
@@ -70,4 +70,14 @@ button {
 
 .dark button {
   @apply bg-darkaccent text-darktext;
+}
+
+@font-face {
+  font-family: 'Cooper Black';
+  src: url(/fonts/COOPBL.woff) format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+.coop {
+  font-family: 'Cooper Black', sans-serif;
 }
