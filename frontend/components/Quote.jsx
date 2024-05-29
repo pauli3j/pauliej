@@ -23,7 +23,7 @@ const Quote = () => {
         onClick={fetchQuote}
         className="p-2 bg-gray-800 text-white dark:bg-darkaccent rounded"
       >
-        {loading ? "Loading..." : "Get Wavy"}
+        {loading ? "Loading..." : "Get WAVY"}
       </button>
       {quote && (
         <div className="mt-4 p-4 bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded transition-transform transform duration-500">

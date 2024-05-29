@@ -24,6 +24,7 @@ jobs:
 
     - name: Build and push Docker images
       run: |
+        echo "NEXT_PUBLIC_API_URL=http://pauliej:8000" >> ./frontend/.env.production
         docker-compose -f docker-compose.yml build
         docker-compose -f docker-compose.yml push
 
@@ -38,5 +39,3 @@ jobs:
           git pull origin main
           docker-compose -f docker-compose.yml pull
           docker-compose -f docker-compose.yml up -d
-          # Set the environment variable for production
-          echo "NEXT_PUBLIC_API_URL=https://pauliej.com:8000" >> .env.production
