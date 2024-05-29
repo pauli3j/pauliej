@@ -1,6 +1,6 @@
 services:
   web:
-    image: pauliejes/pauliej-web:latest
+    image: pauliej/pauliej-web:latest
     build: ./frontend
     expose:
       - "3000"
@@ -8,7 +8,7 @@ services:
       - api
 
   api:
-    image: pauliejes/pauliej-api:latest
+    image: pauliej/pauliej-api:latest
     build: ./backend
     expose:
       - "8000"
@@ -30,4 +30,5 @@ services:
     volumes:
       - ./letsencrypt:/etc/letsencrypt
       - ./letsencrypt/lib:/var/lib/letsencrypt
+      - ./var/www/certbot:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h; done;'"
