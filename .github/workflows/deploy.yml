@@ -39,4 +39,4 @@ jobs:
           docker-compose -f docker-compose.yml pull
           docker-compose -f docker-compose.yml up -d
           # Set the environment variable for production
-          echo "NEXT_PUBLIC_API_URL=http://pauliej.com:8000" >> .env.production
+          echo "NEXT_PUBLIC_API_URL=https://pauliej.com:8000" >> .env.production
