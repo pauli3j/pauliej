@@ -5,12 +5,15 @@ import httpx
 app = FastAPI()
 
 # Configure CORS
+origins = [
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "https://pauliej.com"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = [ # Allows local and production origins
-        "http://localhost:3000",
-        "https://pauliej.com"
-    ],
+    allow_origins=origins,  # Allows specified origins
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
