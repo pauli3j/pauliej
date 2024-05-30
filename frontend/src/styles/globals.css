@@ -8,10 +8,6 @@
   font-family: 'Cooper Black', sans-serif;
 }
 
-a {
-  color: purple;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -84,4 +80,8 @@ button {
 
 .dark button {
   @apply bg-darkaccent text-darktext;
+}
+
+a {
+  color: purple;
 }

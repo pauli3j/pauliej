@@ -8,10 +8,19 @@ const Quote = () => {
     setLoading(true);
     try {
       const doma = window.location.origin;
-      const domain = doma.replace(":3000", "");
+      const domai = doma.replace(":3000", "");
+      const domain = domai.replace("https", "http");
       const port = 8000;
       const url = `${domain}:${port}/quote`;
-      const response = await fetch(url);
+      const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Methods': 'GET',
+              'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+          },
+      });
       const data = await response.json();
       setQuote(data.quote);
     } catch (error) {
