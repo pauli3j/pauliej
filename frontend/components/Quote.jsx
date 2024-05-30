@@ -7,7 +7,7 @@ const Quote = () => {
   const fetchQuote = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/quote`);
+      const response = await fetch(`quote`);
       const data = await response.json();
       setQuote(data.quote);
     } catch (error) {
