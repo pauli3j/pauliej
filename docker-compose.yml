@@ -6,7 +6,7 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - NEXT_PUBLIC_API_URL=https://pauliej.com:8000
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
     depends_on:
       - api
 
@@ -16,8 +16,8 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - NODE_ENV=production
-    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+          - NODE_ENV=production
+          - NEXT_PUBLIC_API_URL=http://localhost:8000
 
   nginx:
     image: nginx:latest
