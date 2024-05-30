@@ -36,9 +36,9 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /root/pauliej
-          sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
           git pull origin main
           docker-compose down
           docker system prune -a --volumes --all --force
           docker-compose pull
           docker-compose up --build -d
+# sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
