@@ -37,5 +37,6 @@ jobs:
         script: |
           cd /root/pauliej
           git pull origin main
+          docker system prune -a --volumes --all --force
           docker-compose -f docker-compose.yml pull
           docker-compose -f docker-compose.yml up -d
