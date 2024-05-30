@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Cooper Black';
-  src: url(/fonts/COOPBL.woff) format('woff');
+  src: url(./fonts/COOPBL.woff) format('woff');
   font-style: normal;
   font-weight: 400;
 }
