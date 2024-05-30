@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--ssl-keyfile=/etc/letsencrypt/live/pauliej.com/privkey.pem", "--ssl-certfile=/etc/letsencrypt/live/pauliej.com/fullchain.pem"]
+CMD ["fastapi", "run", "app/main.py", "--port", "8000"]
