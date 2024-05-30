@@ -8,6 +8,10 @@
   font-family: 'Cooper Black', sans-serif;
 }
 
+a {
+  color: purple;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

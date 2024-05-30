@@ -25,24 +25,24 @@ import {
                 <CardTitle>Who?</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Hello hello! I'm Paulie Jesukiewicz, coming at you via HTTP request. Little bit about me: I'm a Professional-Python-Playa and Crowned-Cloud-Captain. I can tackle just about anything you throw at me on a computer, but my true loves are suring up software security, crafting physics-defying automation, and embarking on lifelong learning escapades. I've been known for my eloquent discourse, ingenious solutions, and harmonious collaboration.</p>
+                <p>Hello hello! I'm Paulie Jesukiewicz, and I'm here to chat tech. I'm a whiz with Python and a maestro of the cloud. I can handle just about anything on a computer, but my true passions are fortifying software security, crafting mind-blowing automation, and constantly learning new things. People know me for my articulate communication, clever solutions, and collaborative spirit.</p>
               </CardContent>
             </Card>
   
             <Card>
               <CardHeader>
-                <CardTitle>Projects</CardTitle>
+                <CardTitle>Career</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul>
                   <li>
-                      <strong>CI/CD Security Automation:</strong> Developed a Python-based tool to automate compliance testing, leveraging Docker, Python, MySQL, and Splunk to streamline security analysis.
+                      <strong>CI/CD Security Automation:</strong> Built a Python tool that automates compliance testing. It uses Docker, Python, MySQL, and Splunk to make security analysis a breeze.
                   </li>
                   <li>
-                      <strong>Application Revamp:</strong> Led a migration to modern architecture using Django, Vue.JS, and Azure, enhancing system performance and security by 30%.
+                      <strong>Application Revamp:</strong> Spearheaded a migration to modern architecture with Django, Vue.JS, and Azure, boosting system performance and security.
                   </li>
                   <li>
-                      <strong>Tableau Dashboard Portal:</strong> Designed a company-wide portal for Tableau dashboards, increasing user engagement and improving data accessibility.
+                      <strong>Tableau Dashboard Portal:</strong> Created a company-wide portal for Tableau dashboards, making data more accessible and increasing user engagement.
                   </li>
                 </ul>
               </CardContent>
@@ -53,7 +53,7 @@ import {
                 <CardTitle>Hobbies</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>When I'm not diving deep into code or exploring new tech trends, you can find me tinkering at my workbench with soldering projects and Raspberry Pi experiments. I love creating DIY electronics and finding innovative ways to integrate technology into everyday life. In my downtime, I enjoy leisurely walks around Adams Morgan, soaking in the vibrant community and the occasional brainstorming session. Lifelong learning is my mantra, and I’m always on the hunt for the next big idea or project to tackle.</p>
+                <p>When I'm not deep in code or exploring the latest tech trends, you can find me at my workbench, soldering and experimenting with Raspberry Pi projects. I love DIY electronics and discovering new ways to blend technology into everyday life. I also enjoy leisurely walks around Adams Morgan, soaking up the community vibes and brainstorming my next big idea. Lifelong learning is my mantra, and I'm always on the lookout for exciting new projects.</p>
               </CardContent>
             </Card>
           </main>
