@@ -7,7 +7,11 @@ const Quote = () => {
   const fetchQuote = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`quote`);
+      const doma = window.location.origin;
+      const domain = doma.replace(":3000", "");
+      const port = 8000;
+      const url = `${domain}:${port}/quote`;
+      const response = await fetch(url);
       const data = await response.json();
       setQuote(data.quote);
     } catch (error) {
