@@ -8,8 +8,8 @@ const Quote = () => {
     setLoading(true);
     try {
       const doma = window.location.origin;
-      const domai = doma.replace(":3000", "");
-      const domain = domai.replace("https", "http");
+      const domain = doma.replace(":3000", "");
+      // const domain = domai.replace("https", "http");
       const port = 8000;
       const url = `${domain}:${port}/quote`;
       const response = await fetch(url, {
