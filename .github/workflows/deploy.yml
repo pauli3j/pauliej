@@ -41,4 +41,3 @@ jobs:
           docker system prune -a --volumes --all --force
           sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
           docker-compose up --build -d
-          sudo systemctl restart nginx
