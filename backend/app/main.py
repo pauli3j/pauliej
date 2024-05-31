@@ -1,8 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 import httpx
 
 app = FastAPI()
+
+file_path = "aba9abcc-ef4b-422a-b401-044dcea210c6.txt"
 
 # Configure CORS
 origins = [
@@ -38,3 +41,7 @@ async def get_quote():
         raise HTTPException(status_code=e.response.status_code, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/aba9abcc-ef4b-422a-b401-044dcea210c6.txt")
+async def get_file():
+    return FileResponse(path=file_path, filename=file_path, media_type='text/txt')
