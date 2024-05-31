@@ -17,6 +17,7 @@
         "https-browserify": "^1.0.0",
         "lucide-react": "^0.379.0",
         "next": "latest",
+        "next-themes": "^0.3.0",
         "next-transpile-modules": "^10.0.1",
         "process": "^0.11.10",
         "react": "latest",
