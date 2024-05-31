@@ -5,7 +5,7 @@ import httpx
 
 app = FastAPI()
 
-file_path = "aba9abcc-ef4b-422a-b401-044dcea210c6.txt"
+file_path = "./aba9abcc-ef4b-422a-b401-044dcea210c6.txt"
 
 # Configure CORS
 origins = [
