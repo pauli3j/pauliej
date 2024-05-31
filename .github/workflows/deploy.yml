@@ -42,4 +42,4 @@ jobs:
           sudo systemctl service nginx stop
           sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
           docker-compose up --build -d
-          sudo systemctl service nginx restart
+          sudo systemctl restart nginx
