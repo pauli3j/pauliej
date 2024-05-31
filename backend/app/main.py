@@ -42,6 +42,7 @@ async def get_quote():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# Scanner config
 @app.get("/aba9abcc-ef4b-422a-b401-044dcea210c6.txt")
 async def get_file():
     return FileResponse(path=file_path, filename=file_path, media_type='text/txt')
