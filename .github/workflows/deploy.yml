@@ -43,7 +43,7 @@ jobs:
           docker-compose down
           docker system prune -a --volumes --all --force
           sudo systemctl stop nginx
-          #sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
+          sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
           docker-compose up --build -d
-          #sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
+          sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
           sudo systemctl restart nginx
