@@ -38,7 +38,7 @@ jobs:
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /root/pauliej
+          cd /mnt/volume_nyc1_01/pauliej
           git pull origin main
           docker-compose down
           docker system prune -a --volumes --all --force
