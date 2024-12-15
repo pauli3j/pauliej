@@ -1,5 +1,4 @@
 # 🌟 PaulieJ Project 🌟
-
 Welcome to project **pauliej.com**! This repository houses a sophisticated full-stack application with a Python backend and a Next.js frontend, all containerized for easy deployment. Follow the steps below to set up and run the project on your local machine or deploy it to the cloud.
 
 
