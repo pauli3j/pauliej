@@ -38,13 +38,13 @@ jobs:
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /root/pauliej
+          cd /mnt/volume_nyc1_01/pauliej
           git pull origin main
           docker-compose down
           docker rm -vf $(docker ps -aq)
           docker rmi -f $(docker images -aq)
           docker system prune -a --volumes --all --force
-          sudo systemctl service nginx stop
+          sudo systemctl stop nginx
           #sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
           docker-compose up --build -d
           #sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
