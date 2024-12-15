@@ -9,6 +9,7 @@ Welcome to project **pauliej.com**! This repository houses a sophisticated full-
 - **Dockerized**: Containerized services for consistent and reproducible environments.
 - **CI/CD**: Ready for continuous integration and deployment.
 
+
 ## 🗂 Project Structure
 
 ```plaintext
