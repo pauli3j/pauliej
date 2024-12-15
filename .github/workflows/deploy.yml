@@ -41,6 +41,8 @@ jobs:
           cd /root/pauliej
           git pull origin main
           docker-compose down
+          docker rm -vf $(docker ps -aq)
+          docker rmi -f $(docker images -aq)
           docker system prune -a --volumes --all --force
           sudo systemctl service nginx stop
           #sudo lsof -i :80 | grep -v COMMAND | awk '{print $2}' | xargs -r sudo kill -9
